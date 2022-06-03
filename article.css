@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+* {
+    font-family: 'Ubuntu', cursive;
+    text-align: center
+}
+.heading {
+    padding: 5px;
+    color: rgb(0, 4, 255);
+}
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+
+.link{
+    text-decoration: none
+}
+.coppy {
+    background-color: black;
+    color: white;
+}

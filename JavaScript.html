@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript CheatSheet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+  <style>
+    .coppy {
+      background-color: black;
+      padding: 12px;
+      color: white;
+      border-radius: 12px;
+      margin: 20px;
+    }
+
+    #cheat {
+      margin: 40px;
+    }
+
+    .navbar {
+      padding: 12px;
+    }
+  </style>
+
+  <script>
+    const a = "Right click then format document";
+
+    confirm(`Do ${a} to make it good in VS CODE`);
+
+    function copyTextToClipboard(text) {
+      var textArea = document.getElementsByClassName("coppy");
+      textArea.value = text
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+      } catch (err) {
+        console.log('Oops, unable to copy');
+      }
+
+      document.body.removeChild(textArea);
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://codingwithshikhar.web.app/">Go back</a>
+          </li>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+      </div>
+    </div>
+  </nav>
+  <!-- NAV ENDS -->
+
+  <div id="cheat">
+    <h1>JavaScript Cheatsheet </h1>
+    <hr>
+    <p>Set of JavaScript basic syntax to add, execute and write basic programming paradigms in Javascript </p>
+    <hr>
+    <h2>Functions</h2>
+    <hr>
+    <p>JavaScript Function syntax</p>
+    <hr>
+    <p class="coppy">function nameOfFunction (parameters) {
+      <br>
+      // function body
+      <br>
+      }
+    </p>
+    <hr>
+    <h2>DOM Element</h2>
+    <hr>
+    <p>Changing content of a DOM Element</p>
+    <hr>
+    <p class="coppy">document.getElementById("elementID").innerHTML = "Hello World!";</p>
+    <hr>
+    <h2>Output</h2>
+    <hr>
+    <p>This will print the value of a in JavaScript console</p>
+    <hr>
+    <p class="coppy">console.log(a);</p>
+    <hr>
+    <h2>Conditional Statements</h2>
+    <hr>
+    <p>Conditional statements are used to perform operations based on some conditions.</p>
+    <hr>
+    <h3>If Statement</h3>
+    <hr>
+    <p>The block of code to be executed, when the condition specified is true.</p>
+    <hr>
+    <p class="coppy">if (condition) {
+      <br>
+      // block of code to be executed if the condition is true
+      <br>
+      }
+    </p>
+    <hr>
+    <h3>If-else Statement</h3>
+    <hr>
+    <p>If the condition for the if block is false, then the else block will be executed.</p>
+    <hr>
+    <p class="coppy">if (condition) {
+      <br>
+      // block of code to be executed if the condition is true
+      } <br> else {
+      <br>
+      // block of code to be executed if the condition is false
+      <br>
+      }
+    </p>
+    <hr>
+    <h3>Else-if Statement</h3>
+    <hr>
+    <p>A basic if-else ladder</p>
+    <hr>
+    <p class="coppy">if (condition1) {
+      <br>
+      // block of code to be executed if condition1 is true
+      <br>
+      } else if (condition2) {
+      <br>
+      // block of code to be executed if the condition1 is false and condition2 is true
+      <br>
+      } else {
+      <br>
+      // block of code to be executed if the condition1 is false and condition2 is false
+      <br>
+      }
+    </p>
+    <hr>
+    <h3>Switch Statement</h3>
+    <hr>
+    <p>Switch case statement in JavaScript</p>
+    <hr>
+    <p class="coppy">switch(expression) {
+      <br>
+      case x:
+      <br>
+      // code block
+      <br>
+      break;
+      <br>
+      case y:
+      <br>
+      // code block
+      <br>
+      break;
+      <br>
+      default:
+      <br>
+      // code block
+      <br>
+      }
+    </p>
+    <hr>
+    <h2>Iterative Statements (Loops)</h2>
+    <hr>
+    <p>Iterative statement facilitates programmer to execute any block of code lines repeatedly and can be controlled as
+      per conditions added by the programmer.</p>
+    <hr>
+    <h3>For Loop</h3>
+    <hr>
+    <p>For loop syntax in javascript</p>
+    <hr>
+    <p class="coppy">for (statement 1; statement 2; statement 3) {
+      <br>
+      // code block to be executed
+      <br>
+      }
+    </p>
+    <hr>
+    <h3>While Loop</h3>
+    <hr>
+    <p>Runs the code till the specified condition is true</p>
+    <hr>
+    <p class="coppy">while (condition) {
+      <br>
+      // code block to be executed
+      <br>
+      }
+    </p>
+    <hr>
+    <h3>Do While Loop</h3>
+    <hr>
+    <p>A do while loop is executed at least once despite the condition being true or false</p>
+    <hr>
+    <p class="coppy">do {
+      <br>
+      // run this code in block
+      <br>
+      i++;
+      <br>
+      } while (condition);
+      <br>
+    </p>
+    <hr>
+    <h2>Strings</h2>
+    <hr>
+    <h3>charAt method</h3>
+    <hr>
+    <p>Returns the character from the specified index.</p>
+    <hr>
+    <p class="coppy">str.charAt(3)</p>
+    <hr>
+    <h3>concat method</h3>
+    <hr>
+    <p>Joins two or more strings together.</p>
+    <hr>
+    <p class="coppy">str1.concat(str2)</p>
+    <hr>
+    <h3>index of method</h3>
+    <hr>
+    <p>Returns the index of the first occurrence of the specified character from the string else -1 if not found.</p>
+    <hr>
+    <p class="coppy">str.indexOf('substr')</p>
+    <hr>
+    <h3>match method</h3>
+    <hr>
+    <p>Searches a string for a match against a regular expression.</p>
+    <hr>
+    <p class="coppy">str.match(/(chapter \d+(\.\d)*)/i;)</p>
+    <hr>
+    <h3>replace method</h3>
+    <hr>
+    <p>Searches a string for a match against a specified string or char and returns a new string by replacing the
+      specified values.</p>
+    <hr>
+    <p class="coppy">str1.replace(str2)</p>
+    <hr>
+    <h3>search method</h3>
+    <hr>
+    <p>Searches a string against a specified value.</p>
+    <hr>
+    <p class="coppy">str.search('term')</p>
+    <hr>
+    <h3>split method</h3>
+    <hr>
+    <p>Splits a string into an array consisting of substrings.</p>
+    <hr>
+    <p class="coppy">str.split('\n')</p>
+    <hr>
+    <h3>substring method</h3>
+    <hr>
+    <p>Returns a substring of a string containing characters from the specified indices.</p>
+    <hr>
+    <p class="coppy">str.substring(0,5)</p>
+    <hr>
+    <h2>Arrays</h2>
+    <hr>
+    <p>The array is a collection of data items of the same type. In simple terms, it is a variable that contains
+      multiple values.</p>
+    <hr>
+    <h3>variable</h3>
+    <hr>
+    <p>Containers for storing data.</p>
+    <hr>
+    <p class="coppy">var fruit = ["element1", "element2", "element3"];</p>
+    <hr>
+    <h3>concat method</h3>
+    <hr>
+    <p>Joins two or more arrays together.</p>
+    <hr>
+    <p class="coppy">concat()</p>
+    <hr>
+    <h3>indexOf method</h3>
+    <hr>
+    <p>Returns the index of the specified item from the array.</p>
+    <hr>
+    <p class="coppy">indexOf()</p>
+    <hr>
+    <h3>join method</h3>
+    <hr>
+    <p>Converts the array elements to a string.</p>
+    <hr>
+    <p class="coppy">join()</p>
+    <hr>
+    <h3>pop method</h3>
+    <hr>
+    <p>Deletes the last element of the array.</p>
+    <hr>
+    <p class="coppy">pop()</p>
+    <hr>
+    <h3>reverse method</h3>
+    <hr>
+    <p>This method reverses the order of the array elements.</p>
+    <hr>
+    <p class="coppy">reverse()</p>
+    <hr>
+    <h3>sort method</h3>
+    <hr>
+    <p>Sorts the array elements in a specified manner.</p>
+    <hr>
+    <p class="coppy">sort()</p>
+    <hr>
+    <h3>toString method</h3>
+    <hr>
+    <p>Converts the array elements to a string.</p>
+    <hr>
+    <p class="coppy">toString()</p>
+    <hr>
+    <h3>valueOf method</h3>
+    <hr>
+    <p>returns the relevant Number Object holding the value of the argument passed</p>
+    <hr>
+    <p class="coppy">valueOf()</p>
+    <hr>
+    <h2>Number Methods</h2>
+    <hr>
+    <p>JS math and number objects provide several constant and methods to perform mathematical operations.</p>
+    <hr>
+    <h3>toExponential method</h3>
+    <hr>
+    <p>Converts a number to its exponential form.</p>
+    <hr>
+    <p class="coppy">toExponential()</p>
+    <hr>
+    <h3>toPrecision method</h3>
+    <hr>
+    <p>Formats a number into a specified length.</p>
+    <hr>
+    <p class="coppy">toPrecision()</p>
+    <hr>
+    <h3>toString method</h3>
+    <hr>
+    <p>Converts an object to a string</p>
+    <hr>
+    <p class="coppy">toString()</p>
+    <hr>
+    <h3>valueOf method</h3>
+    <hr>
+    <p>Returns the primitive value of a number.</p>
+    <hr>
+    <p class="coppy">valueOf()</p>
+    <hr>
+    <h2>Maths Methods</h2>
+    <hr>
+    <h3>ceil method</h3>
+    <hr>
+    <p>Rounds a number upwards to the nearest integer, and returns the result</p>
+    <hr>
+    <p class="coppy">ceil(x)</p>
+    <hr>
+    <h3>exp method</h3>
+    <hr>
+    <p>Returns the value of E^x.</p>
+    <hr>
+    <p class="coppy">exp(x)</p>
+    <hr>
+    <h3>log method</h3>
+    <hr>
+    <p>Returns the logarithmic value of x.</p>
+    <hr>
+    <p class="coppy">log(x)</p>
+    <hr>
+    <h3>pow method</h3>
+    <hr>
+    <p>Returns the value of x to the power y.</p>
+    <hr>
+    <p class="coppy">pow(x,y)</p>
+    <hr>
+    <h3>random method</h3>
+    <hr>
+    <p>Returns a random number between 0 and 1.</p>
+    <hr>
+    <p class="coppy">random()</p>
+    <hr>
+    <h3>sqrt method</h3>
+    <hr>
+    <p>Returns the square root of a number x</p>
+    <hr>
+    <p class="coppy">sqrt(x)</p>
+    <hr>
+    <h2>Dates</h2>
+    <hr>
+    <p>To create a date object</p>
+    <hr>
+    <p class="coppy">const dt = new Date();</p>
+    <hr>
+    <p>Date object is used to get the year, month and day. It has methods to get and set day, month, year, hour, minute,
+      and seconds.</p>
+    <hr>
+    <h3>Pulling Date from the Date object</h3>
+    <hr>
+    <p>Returns the date from the date object</p>
+    <hr>
+    <p class="coppy">getDate()</p>
+    <hr>
+    <h3>Pulling Day from the Date object</h3>
+    <hr>
+    <p>Returns the day from the date object</p>
+    <hr>
+    <p class="coppy">getDay()</p>
+    <hr>
+    <h3>Pulling Hours from the Date object</h3>
+    <hr>
+    <p>Returns the hours from the date object.</p>
+    <hr>
+    <p class="coppy">getHours()</p>
+    <hr>
+    <h3>Pulling Minutes from the Date object</h3>
+    <hr>
+    <p>Returns the minutes from the date object.</p>
+    <hr>
+    <p class="coppy">getMinutes()</p>
+    <hr>
+    <h3>Pulling Seconds from the Date object</h3>
+    <hr>
+    <p>Returns the seconds from the date object</p>
+    <hr>
+    <p class="coppy">getSeconds()</p>
+    <hr>
+    <h3>Pulling Time from the Date object</h3>
+    <hr>
+    <p>Returns the time from the date object</p>
+    <hr>
+    <p class="coppy">getTime()</p>
+    <hr>
+    <h2>Mouse Events</h2>
+    <hr>
+    <p>Any change in the state of an object is referred to as an Event. With the help of JS, you can handle events,
+      i.e., how any specific HTML tag will work when the user does something.</p>
+    <hr>
+    <h3>Click</h3>
+    <hr>
+    <p>Fired when an element is clicked</p>
+    <hr>
+    <p class="coppy">element.addEventListener('click', ()=>{
+      <br>
+      // Code to be executed when the event is fired
+      <br>
+      });
+    </p>
+    <hr>
+    <h3>oncontextmenu</h3>
+    <hr>
+    <p>Fired when an element is right-clicked</p>
+    <hr>
+    <p class="coppy">element.addEventListener('contextmenu', ()=>{
+      <br>
+      // Code to be executed when the event is fired
+      <br>
+      });
+    </p>
+    <hr>
+    <h3>dblclick</h3>
+    <hr>
+    <p>Fired when an element is double-clicked</p>
+    <hr>
+    <p class="coppy">element.addEventListener('dblclick', ()=>{
+      <br>
+      // Code to be executed when the event is fired
+      <br>
+      });
+    </p>
+    <hr>
+    <h3>mouseenter</h3>
+    <hr>
+    <p>Fired when an element is entered by the mouse arrow</p>
+    <hr>
+    <p class="coppy">element.addEventListener('mouseenter', ()=>{
+      <br>
+      // Code to be executed when the event is fired
+      <br>
+      });
+    </p>
+    <hr>
+    <h3>mouseleave</h3>
+    <hr>
+    <p>Fired when an element is exited by the mouse arrow</p>
+    <hr>
+    <p class="coppy">element.addEventListener('mouseleave', ()=>{
+      <br>
+      // Code to be executed when the event is fired
+      <br>
+      });
+    </p>
+    <hr>
+<h3>mousemove</h3>
+<hr>
+<p>Fired when the mouse is moved inside the element</p>
+<hr>
+<p class="coppy">element.addEventListener('mousemove', ()=>{
+  <br>
+  // Code to be executed when the event is fired
+  <br>
+  });</p>
+  <hr>
+  <h2>Keyboard Events</h2>
+<hr>
+<h3>keydown</h3>
+<hr>
+<p>Fired when the user is pressing a key on the keyboard</p>
+<hr>
+<p class="coppy">element.addEventListener('keydown', ()=>{
+  <br>
+  // Code to be executed when the event is fired
+  <br>
+  });</p>
+<hr>
+<h3>keypress</h3>
+<hr>
+<p>Fired when the user presses the key on the keyboard</p>
+<hr>
+<p class="coppy">element.addEventListener('keypress', ()=>{
+  <br>
+  // Code to be executed when the event is fired
+  <br>
+  });</p>
+<hr>
+<h3>keyup</h3>
+<hr>
+<p>Fired when the user releases a key on the keyboard</p>
+<hr>
+<p class="coppy">element.addEventListener('keyup', ()=>{
+  <br>
+  // Code to be executed when the event is fired
+  <br>
+  });</p>
+<hr>
+<h2>Errors</h2>
+<hr>
+<p>Errors are thrown by the compiler or interpreter whenever they find any fault in the code, and it can be of any type like syntax error, run-time error, logical error, etc. JS provides some functions to handle the errors.</p>
+<hr>
+<h3>try and catch</h3>
+<hr>
+<p>Try the code block and execute catch when err is thrown</p>
+<hr>
+<p class="coppy">try {
+  <br>
+  Block of code to try
+  <br>
+  }
+  <br>
+  catch(err) {
+    <br>
+  Block of code to handle errors
+  <br>
+  }</p>
+<hr>
+<h2>Window Methods</h2>
+<hr>
+<p>Methods that are available from the window object</p>
+<hr>
+<h3>alert method</h3>
+<hr>
+<p>Used to alert something on the screen</p>
+<hr>
+<p class="coppy">alert()</p>
+<hr>
+<h3>blur method</h3>
+<hr>
+<p>The blur() method removes focus from the current window.</p>
+<hr>
+<p class="coppy">blur()</p>
+<hr>
+<h3>setInterval</h3>
+<hr>
+<p>Keeps executing code at a certain interval</p>
+<hr>
+<p class="coppy">setInterval(() => {
+  <br>
+  // Code to be executed
+  <br>
+  }, 1000);</p>
+<hr>
+<h3>setTimeout</h3>
+<hr>
+<p>Executes the code after a certain interval of time</p>
+<hr>
+<p class="coppy">setTimeout(() => {
+  <br>
+  // Code to be executed
+  <br>
+  }, 1000);</p>
+<hr>
+<h3>close</h3>
+<hr>
+<p>The Window. close() method closes the current window</p>
+<hr>
+<p class="coppy">window.close()</p>
+<hr>
+<h3>confirm</h3>
+<hr>
+<p>The window.confirm() instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels</p>
+<hr>
+<p class="coppy">window.confirm('Are you sure?')</p>
+<hr>
+<h3>open</h3>
+<hr>
+<p>Opens a new window</p>
+<hr>
+<p class="coppy">window.open("https://codingwithshikhar.web.app");</p>
+<hr>
+<h3>prompt</h3>
+<hr>
+<p>Prompts the user with a text and takes a value. Second parameter is the default value</p>
+<hr>
+<p class="coppy">var name = prompt("What is your name?", "Shikhar");</p>
+<hr>
+<h3>scrollBy</h3>
+<hr>
+<p class="coppy">window.scrollBy(100, 0); // Scroll 100px to the right</p>
+<hr>
+<h3>scrollTo</h3>
+<hr>
+<p>Scrolls the document to the specified coordinates.</p>
+<hr>
+<p class="coppy">window.scrollTo(500, 0); // Scroll to horizontal position 500</p>
+<hr>
+<h3>clearInterval</h3>
+<hr>
+<p>Clears the setInterval. var is the value returned by setInterval call</p>
+<hr>
+<p class="coppy">clearInterval(var)</p>
+<hr>
+<h3>clearTimeout</h3>
+<hr>
+<p>Clears the setTimeout. var is the value returned by setTimeout call</p>
+<hr>
+<p class="coppy">clearTimeout(var)</p>
+<hr>
+<h3>stop</h3>
+<hr>
+<p>Stops the further resource loading</p>
+<hr>
+<p class="coppy">stop()</p>
+<hr>
+<h2>Query/Get Elements</h2>
+<hr>
+<p>The browser creates a DOM (Document Object Model) whenever a web page is loaded, and with the help of HTML DOM, one can access and modify all the elements of the HTML document.</p>
+<hr>
+<h3>querySelector</h3>
+<hr>
+<p>Selector to select first matching element</p>
+<hr>
+<p class="coppy">document.querySelector('css-selectors')</p>
+<hr>
+<h3>querySelectorAll</h3>
+<hr>
+<p>A selector to select all matching elements</p>
+<hr>
+<p class="coppy">document.querySelectorAll('css-selectors', ...)</p>
+<hr>
+<h3>getElementsByTagName</h3>
+<hr>
+<p>Select elements by tag name</p>
+<hr>
+<p class="coppy">document.getElementsByTagName('element-name')</p>
+<hr>
+<h3>getElementsByClassName</h3>
+<hr>
+<p>Select elements by class name</p>
+<hr>
+<p class="coppy">document.getElementsByClassName('class-name')</p>
+<hr>
+<h3>Get Element by Id</h3>
+<hr>
+<p>Select an element by its id</p>
+<hr>
+<p class="coppy">document.getElementById('id')</p>
+<hr>
+<h2>Creating Elements</h2>
+<hr>
+<p>Create new elements in the DOM</p>
+<hr>
+<h3>createElement</h3>
+<hr>
+<p>Create a new element</p>
+<hr>
+<p class="coppy">document.createElement('div')</p>
+<hr>
+<h3>createTextNode</h3>
+<hr>
+<p>Create a new text node</p>
+<hr>
+<p class="coppy">document.createTextNode('some text here')</p>
+
+  </div>
+  <!--ENDING OF #CHEAT-->
+  <hr>
+  <a href="https://api.codewithharry.com/media/blogFiles/javascript-cheatsheet/JavaScript_Cheatsheet_CodeWithHarry.pdf"
+    class="btn btn-danger" style="margin:12px">Download</a>
+
+  <hr>
+
+
+
+</body>
+
+</html>
